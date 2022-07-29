@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="crudsStyle.css">
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <title>CURDS</title>
+</head>
+<body class="contents">
+    
+    <div class="content">
+        
+        <div class="head">
+            <h2>App management</h2>
+            <p>Gérer votre magazin ici</p>
+        </div>
+
+        <div class="inputs">
+            <input type="text" placeholder="Titre" id="titre" autocomplete="off" required>
+            <div class="price">
+                <input onkeyup="getTotal()" type="number" placeholder="Prix" id="prix" autocomplete="off">
+                <input onkeyup="getTotal()" type="number" placeholder="Taxes" id="taxes" autocomplete="off">
+                <small  class="total" id="total"></small>
+            </div>
+            
+
+            <input type="number" placeholder="combien de cet article ?" id="combien" autocomplete="off">
+            <input type="text" placeholder="categorie" id="category" autocomplete="off">
+            <button type="submit" id="submit" class="btn-sub" >Ajouter produit</button>
+
+        </div>
+
+        <div class="outputs">
+            <div class="search-block">
+                <input onkeyup="searchData(this.value)" type="text" id="search" placeholder="Recherche" autocomplete="off">
+                <div class="btnSearch">
+                    <button type="submit" id="searchTitle" class="btn-sub" onclick="getMood(this.id)">Recherche avec Titre</button>
+                    <button type="submit" id="searchCat" class="btn-sub" onclick="getMood(this.id)">Recherche avec Categorie</button>
+                </div>
+            </div>
+
+
+
+
+            <div id="deleteAll"></div>
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>titre</th>
+                    <th>prix</th>
+                    <th>taxes</th>
+                    <th>total</th>
+                    <th>Count</th>
+                    <th>category</th>
+                    <th>Update</th>
+                    <th>delete</th>
+                </tr>
+                <tbody id="tbody">
+                    
+                </tbody>
+            </table>
+        </div>
+        
+
+    </div>  
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" style="background: rgba(255, 255, 255,0.1); backdrop-filter:blur(5px);">
+        <div class="modal-dialog" >
+            <div class="modal-content">
+                <div class="modal-body" >
+                   <div class="confirmation">
+                    <p>Voullez-vous supprimer tout ?</p>
+                    <div class="confirm-inputs">
+                        <input type="submit" class="btn-confirm1" id="oui" value="OUI" onclick="deleteAll(this.id)" data-bs-dismiss="modal" aria-label="Close">
+                        <input type="submit" class="btn-confirm2" id="non" value="NON" onclick="deleteAll(this.id)" data-bs-dismiss="modal" aria-label="Close">
+                    </div>
+                   </div>
+
+
+                </div>   
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="crudsMain.js"></script>
+</body>
+</html>

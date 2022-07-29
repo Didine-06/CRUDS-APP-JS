@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    box-sizing: border-box;
+    font-family: Arial Black;
+    background-color: rgb(29, 29, 29) !important;
+    
+}
+.content{
+    width: 80%;
+    padding: 20px;
+    margin: auto;
+    position: relative;
+}
+.head{
+    
+    text-align: center;
+}
+h2{
+    font-size: 40px;
+    color: bisque;
+}
+
+p{
+    padding: 15px 0;
+    color: antiquewhite;
+    font-size: 20px;
+}
+
+input{
+    width: 100% ;
+    height: 60px ;
+    margin: 5px 0px !important;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: aliceblue;
+    background: rgba(14, 14, 14, 0.678);
+    padding: 4px 10px !important;
+    box-shadow: 0px 4px 15px -12px #ffffff;
+    
+}
+
+input:focus{
+    background: rgba(7, 7, 7, 0.911);
+    transform: scale(1.05);
+}
+
+
+.btn-sub{
+    width: 100%;
+    height: 40px;
+    margin: 5px 0;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.952);
+    color: rgb(19, 19, 19);   
+    transition: all 0.4s;
+}
+.btn-sub:hover{
+    letter-spacing: 1px;
+    background: rgba(255, 255, 255, 0.664);
+}
+
+
+
+
+.price{
+    width: 90%;
+    display: flex;
+}
+.price input{
+    margin-right: 15px !important;
+}
+#total{
+    padding: 20px 5px;
+    background-color: rgba(255, 9, 9, 0.589);
+    color: white;
+    border-radius: 5px;
+    
+}
+
+small::before{
+    content: 'Total:';
+}
+table{
+    width: 100%;
+    text-align: center;
+    
+}
+table th {
+    text-transform: uppercase;
+    
+    color: white;
+    border: 2px solid grey;
+    
+}
+
+table td{
+    padding: 10px 0;
+    border: 2px solid grey;
+    font-weight: 700;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+}
+
+table td button{
+    outline: none;
+    border: 0;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+#deleteAll{
+    padding: 10px 0;
+    text-align: center;
+}
+#deleteAll button{
+    
+    width:100%;
+    outline: none;
+    border: 0;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+.btnSearch{
+    display: flex;
+    justify-content: space-between;
+}
+.btnSearch button{
+    width: 49%;
+}
+#delete{
+    background: rgba(233, 20, 20, 0.897);
+    color: white;
+}
+#update{
+    background:rgba(255, 255, 255, 0.815) ;
+    
+}
+.confirmation p{
+    color: #070707;
+    text-align: center;
+    font-weight: 500;
+}
+.confirm-inputs{
+    display: flex;
+    justify-content: space-between;
+}
+.confirm-inputs .btn-confirm2{
+    width: 48%;
+    background: red;
+    transition: all .1s;
+}
+.confirm-inputs .btn-confirm2:hover,
+.confirm-inputs .btn-confirm1:hover{
+    letter-spacing: 1px;
+}
+.confirm-inputs .btn-confirm1{
+    width: 48%;
+    background: rgb(3, 119, 9);
+    transition: all .1s;
+}
+
